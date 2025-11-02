@@ -2,9 +2,9 @@ name: SAST Scan Project 3
 
 on:
 push:
-branches: [ main ]
+branches: [main]
 pull_request:
-branches: [ main ]
+branches: [main]
 
 jobs:
 sast:
@@ -29,8 +29,7 @@ python-version: '3.11'
 uses: github/codeql-action/init@v3
 with:
 languages: python
-# If your code is in a subfolder, uncomment and set this:
-# source-root: ./app
+# source-root: ./app # uncomment if your code is in a subfolder
 queries: security-extended,security-and-quality
 
 - name: Autobuild
