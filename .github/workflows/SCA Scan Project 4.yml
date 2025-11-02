@@ -44,7 +44,7 @@ jobs:
       with:
         scan-type: 'image'
         scanners: 'vuln'
-        image-ref: charliebanyard/sunday_2:Sunday2
+        image-ref: syeda7219/sunday_2:Sunday2
         scan-ref: '.'
         hide-progress: false
         format: 'table'
