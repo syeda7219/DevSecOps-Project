@@ -2,6 +2,7 @@ import sqlite3
 import hashlib
 import xml.etree.ElementTree as ET
 import pickle
+import json
 import jwt
 import urllib3
 from flask import Flask, request
@@ -63,7 +64,8 @@ def greet():
 
 # 8. **Insecure Deserialization**
 def insecure_deserialize(data):
-    return pickle.loads(data)
+    # Use json for safe deserialization of user data
+    return json.loads(data)
 
 # 9. **Using Components with Known Vulnerabilities**
 def use_vulnerable_library():
